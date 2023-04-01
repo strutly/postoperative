@@ -1,0 +1,42 @@
+var formatNumber = function (n) {
+  n = n.toString();
+  return n[1] ? n : "0" + n
+};
+var timeago = function (time) {
+  var reg = getRegExp("-", "g");
+  timestamp = time.replace(reg, '/');
+  var date = getDate(timestamp), 
+    // 获取date 中的 年 月 日 时 分 秒
+    Y = date.getFullYear(),
+    M = date.getMonth() + 1,
+    D = date.getDate(),
+    H = date.getHours(),
+    m = date.getMinutes(),
+    s = date.getSeconds(),
+    now = getDate(),
+    nowY = now.getFullYear(),
+    nowM = now.getMonth() + 1,
+    nowD = now.getDate()
+
+    yesterday = getDate(now.getTime() - 86400000);
+    yY = yesterday.getFullYear(),
+    yM = yesterday.getMonth() + 1,
+    yD = yesterday.getDate();
+    ;
+
+  if (Y == nowY && M == nowM && D == nowD) {
+    return (H < 12 ? "上午 " : "下午 ") + formatNumber(H) + ":" + formatNumber(m) + ":" + formatNumber(s);
+  }
+  //if yesterday
+  if (Y == yY && M == yM && D == yD) {
+    return "昨天 " + formatNumber(H) + ":" + formatNumber(m) + ":" + formatNumber(s);
+  }
+
+  
+
+
+  return time;
+}
+module.exports = {
+  timeago:timeago
+};

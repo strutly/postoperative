@@ -1,0 +1,370 @@
+<topTips errorShow="{{errorShow}}" errorMsg="{{errorMsg}}" errorType="{{errorType}}"></topTips>
+
+<scroll-view scroll-y="true">
+  <view class="bg-main flex align-center padding-lg margin text-center radius-xl text-lg">
+    <view class="">{{detail.args.info.name}}</view>
+    <text class="flex-sub cuIcon-{{detail.args.info.sex==1?'male':'female'}} cu-g text-{{detail.args.info.sex==1?'blue':'red'}}"></text>
+    <view class="flex-sub cu-g">{{detail.args.info.age}}岁</view>
+    <view class="flex-sub cu-g">{{detail.args.info.height}}cm</view>
+    <view class="flex-sub">{{detail.args.info.weight}}kg</view>
+    <view class="cuIcon-edit" bindtap="back"></view>
+  </view>
+
+  <view class="cu-list menu sm-border solids card-menu shadow shadow-lg">
+    <view class="cu-item">
+      <view class="content">
+        总能量需求(Kcal)
+        <text class="text-orange">(*{{detail.args.based}})</text>
+      </view>
+      <view class="action">
+        {{detail.args.num1}}
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>脂肪乳(20%)
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        能量<text class="text-gray">(Kcal)</text>
+      </view>
+      <view class="action">
+        <text class="text-gray">{{detail.args.num2}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        液体量<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num3}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>尤文脂肪乳
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        能量<text class="text-gray">(Kcal)</text>
+      </view>
+      <view class="action">
+        <text class="text-gray">{{detail.args.num4}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        液体量<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num5}}</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>葡萄糖注射液
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        50%GS供能<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-gray">{{detail.args.num6}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        GS克数<text class="text-gray">(g)</text>
+      </view>
+      <view class="action">
+        <text class="text-gray">{{detail.args.num7}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        50%GS量<text class="text-gray">(Kcal)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num8}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        10%GS供能<text class="text-gray">(Kcal)</text>
+      </view>
+      <view class="action">
+        <text class="text-gray">{{detail.args.num9}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        GS克数<text class="text-gray">(g)</text>
+      </view>
+      <view class="action">
+        <text class="text-gray">{{detail.args.num10}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        10%GS量<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num11}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>氨基酸(双肽)
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        氨基酸<text class="text-gray">(g)</text>
+      </view>
+      <view class="action">
+        <text class="text-gray">{{detail.args.num12}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        液体量<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num13}}</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>丙氨酰谷氨酰胺
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        氨基酸<text class="text-gray">(g)</text>
+      </view>
+      <view class="action">
+        <text class="text-gray">{{detail.args.num14}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        液体量<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num15}}</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>电解质及微量元素
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        氯化钾(15%)<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num16}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        氯化纳(10%)<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num17}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        水乐维他<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num18}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        维他利匹特<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num19}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        格利福斯<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num20}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        安达美<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num21}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        潘南金<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num22}}</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>其他
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        液体总量<text class="text-gray">(ml)</text>
+      </view>
+      <view class="action">
+        <text class="text-main">{{detail.args.num23}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        营养液泵入速度<text class="text-gray">(ml/h)</text>
+      </view>
+      <view class="action">
+        <text class="text-green">{{detail.args.num24}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        胰岛素用量<text class="text-gray">(IU)</text>
+      </view>
+      <view class="action">
+        <text class="text-green">{{detail.args.num25}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        胰岛素泵入速度<text class="text-gray">(ml/h)</text>
+      </view>
+      <view class="action">
+        <text class="text-green">{{detail.args.num26}}</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="safe-btns"></view>
+
+</scroll-view>
+
+<view class="bg-white foot text-center padding safe-bottom">
+  <view class="bg-main round cu-btn padding-xl text-xl" style="width: 75%;" bindtap="checkPrintStatus" wx:if="{{canPrint}}">准备打印</view>
+</view>
+
+
+<view class="modal-box  flex flex-direction" wx:if="{{modalBluetooth}}" catchtouchmove="true">
+  <view class="modal-bg flex-sub"></view>
+  <view class="modal-content padding flex-direction">
+    <view class="flex solids-bottom padding-bottom align-center">
+      <view class="flex-sub">
+        <text class="padding-sm cuIcon-close text-main text-bold text-xxl" bindtap="modalStatus" data-name="Bluetooth"></text>
+      </view>
+      <view class="cu-btn bg-main round" bindtap="startSearch">蓝牙搜索</view>
+    </view>
+    <scroll-view scroll-y="true" style="height:45vh;">
+      <view class="cu-list menu sm-border">
+        <view class="cu-item" wx:for="{{devices}}" wx:for-item="item" wx:key="{{item.deviceId}}">
+          <view class="content">
+            {{item.name}}
+          </view>
+          <view class="action">
+            <view class="cu-btn bg-grey sm radius margin-right-sm" bindtap="connect" wx:if="{{bluetoothIndex==index}}" data-index="{{index}}">断开连接</view>
+
+            <view class="cu-btn bg-main sm radius" bindtap="connect" data-index="{{index}}">连接</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+
+
+  </view>
+
+</view>
+
+
+<view class="modal-box  flex flex-direction" catchtouchmove="true" wx:if="{{modalPrint}}">
+  <view class="modal-bg flex-sub"></view>
+  <view class="modal-content padding flex flex-direction ">
+    <view class="text-center text-xxl margin-tb flex align-center">
+      <text class="cuIcon-close text-main text-bold " bindtap="modalStatus" data-name="Print"></text>
+      <view class="flex-sub">
+        <text class="cuIcon-pick text-main"></text>打印机已就绪
+      </view>
+      <view class="cuIcon-order text-main" bindtap="changeBluetooth"></view>
+    </view>
+
+    <view class="solids padding flex-sub">
+      <view class="flex">
+        <view class="flex-sub">
+          <view class="text-lg">
+            <text data-type="text" data-text="{{detail.args.info.name}}" class="text-xl print text-bold margin-right-sm">{{detail.args.info.name}}</text>
+            <text data-type="text" class="margin-right-sm print" data-text="男">{{detail.args.info.sex==1?'男':'女'}}</text>
+            <text class="print" data-type="text " data-text="65岁">{{detail.args.info.age}}岁</text>
+          </view>
+          <view class="margin-top print">2023-03-30</view>
+        </view>
+        <image mode="aspectFill" class="margin-bottom-sm print" style="width: 150rpx;height: 150rpx;" data-type="image" data-url="{{qCode}}" src="{{qCode}}"></image>
+      </view>
+      <view class="bg-black" style="height: 6rpx;"></view>
+      <view class="bg-grey margin-tb-sm" style="height: 3rpx;"></view>
+
+
+      <view class="flex print">
+        <view class="flex-treble print" data-type="text" data-text="总能量">总能量</view>
+        <view class="flex-sub text-center print" data-type="text" data-text="1562.5">{{detail.args.num1}}</view>
+        <view class="flex-sub text-right print" data-type="text" data-text="Kcal">Kcal</view>
+      </view>
+      <view class="flex margin-top-sm">
+        <view class="flex-treble print" data-type="text" data-text="总液体量">总液体量</view>
+        <view class="flex-sub text-center print" data-type="text" data-text="2041.3">{{detail.args.num23}}</view>
+        <view class="flex-sub text-right print" data-type="text" data-text="ml">ml</view>
+      </view>
+      <view class="flex margin-top-sm">
+        <view class="flex-treble print" data-type="text" data-text="热氮比">热氮比</view>
+        <view class="flex-sub text-center print" data-type="text" data-text="112.4">{{scale}}</view>
+        <view class="flex-sub text-right print" data-type="text" data-text=""></view>
+      </view>
+      <view class="flex margin-top-sm">
+        <view class="flex-treble print" data-type="text" data-text="输液速度">输液速度</view>
+        <view class="flex-sub text-center print" data-type="text" data-text="---">---</view>
+        <view class="flex-sub text-right print" data-type="text" data-text=""></view>
+      </view>
+      <view class="flex margin-top-sm">
+        <view class="flex-treble print" data-type="text" data-text="总葡萄糖">总葡萄糖</view>
+        <view class="flex-sub text-center print" data-type="text" data-text="---">---</view>
+        <view class="flex-sub text-right print" data-type="text" data-text=""></view>
+      </view>
+      <view class="flex margin-tb-sm">
+        <view class="flex-treble print" data-type="text" data-text="胰岛素用量">胰岛素用量</view>
+        <view class="flex-sub text-center print" data-type="text" data-text="51">{{detail.args.num25}}</view>
+        <view class="flex-sub text-right print" data-type="text" data-text="IU">IU</view>
+      </view>
+    </view>
+  </view>
+  <view class="bg-white padding text-center safe-bottom">
+    <view class="bg-main round cu-btn padding-xl text-xl" style="width: 75%;" bindtap="print">打印</view>
+  </view>
+
+
+</view>

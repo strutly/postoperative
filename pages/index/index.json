@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tabBar":"/components/tab-bar/index",
+    "ocr-navigator": "plugin://ocr-plugin/ocr-navigator"
+  }
+}

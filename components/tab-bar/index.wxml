@@ -1,0 +1,14 @@
+<view class="cu-bar tabbar bg-white shadow foot padding-top">
+  <view class="action margin-top" data-cur="basics">    
+    <view class='cuIcon-cu-image margin-bottom'>
+      <text class="cuIcon-form lg text-main"></text>
+    </view>
+    <view class="footer-des">记录</view>
+  </view>
+  <view class="action margin-top" data-cur="component">
+    <view class='cuIcon-cu-image margin-bottom'>
+      <text class="cuIcon-scan text-xxl text-main"></text>
+    </view>
+    <view class="footer-des">扫一扫</view>
+  </view>
+</view>

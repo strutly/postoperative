@@ -1,0 +1,73 @@
+<topTips errorShow="{{errorShow}}" errorMsg="{{errorMsg}}" errorType="{{errorType}}"></topTips>
+<form bindsubmit="submit" wx:if="{{userInfo.type==1}}">
+  <input name="id" hidden value="{{id}}"></input>
+  <view class="cu-card margin bg-white radius-xl">
+    <view class="cu-form-group padding-lg">
+      <input placeholder="输入身份证" type="idcard" name="cardNo" value="{{cardNo}}" bindblur="cardNoChange"></input>
+      <ocr-navigator bind:onSuccess="cardSuccess" certificateType="idCard" opposite="{{false}}">
+        <text class="cuIcon-scan text-main margin-right-sm"></text>
+      </ocr-navigator>
+    </view>
+    <view class="cu-form-group padding-lg">
+      <view class="title">姓名</view>
+      <input class="text-right" placeholder="姓名" name="name" value="{{name}}"></input>
+    </view>
+    <view class="cu-form-group padding-lr-lg padding-tb-sm">
+      <view class="title">性别</view>
+      <picker bindchange="sexChange" name="sex" value="{{sex}}" range="{{sexArr}}">
+        <view class="picker">
+          {{sexArr[sex]}}
+        </view>
+      </picker>
+    </view>
+    <view class="cu-form-group padding-lg">
+      <view class="title">年龄</view>
+      <input class="text-right" type="number" placeholder="年龄" name="age" value="{{age}}"></input>
+    </view>
+    <view class="cu-form-group padding-lg">
+      <view class="title">身高</view>
+      <input class="text-right" placeholder="身高(CM)" name="height" type="digit" value="{{height}}"></input>
+    </view>
+    <view class="cu-form-group padding-lg">
+      <view class="title">体重</view>
+      <input class="text-right" placeholder="体重(KG)" name="weight" type="digit" value="{{weight}}"></input>
+    </view>
+  </view>
+  <view class="text-center margin-top-xl">
+    <button style="width: 60%;" formType="submit" class="cu-btn round padding-tb-xl bg-main" disabled="{{disabled}}">开始配置</button>
+  </view>
+</form>
+
+
+<view class="cu-modal show" wx:if="{{modalauth}}">
+  <view class="cu-dialog sm">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">授权提示</view>
+    </view>
+    <view class="padding-xl text-left">
+      《输液支持与管理》小程序需要匹配当前手机号是否与本平台信息一致，确认授权后，系统将为通过验证的内部人员开放对应专业服务权限。
+      <view class="text-center margin-top-sm">请点击<text class="text-main"> 确认 </text>进行手机号授权</view>
+    </view>
+
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-gray text-gray" bindtap="modalStatus" data-name="auth">取消</button>
+        <button class="cu-btn bg-main margin-left" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">确定</button>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="cu-bar tabbar bg-white shadow foot padding-top">
+  <view class="action margin-top" bindtap="toUrl" data-url="/pages/index/list">
+    <view class='cuIcon-cu-image margin-bottom'>
+      <text class="cuIcon-form lg text-main"></text>
+    </view>
+    <view class="footer-des">记录</view>
+  </view>
+  <view class="action margin-top" bindtap="scanCode">
+    <view class='cuIcon-cu-image margin-bottom'>
+      <text class="cuIcon-scan text-xxl text-main"></text>
+    </view>
+    <view class="footer-des">扫一扫</view>
+  </view>
+</view>

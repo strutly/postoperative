@@ -1,0 +1,22 @@
+@import "/style/colorUI/main.wxss";
+@import "/style/colorUI/icon.wxss";
+.tabbar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(150rpx + env(safe-area-inset-bottom) / 2)!important;
+	padding-bottom: calc(env(safe-area-inset-bottom) / 2)!important;
+}
+.cuIcon-cu-image text{
+  font-size: 80rpx !important;
+  margin-bottom: 30rpx !important;
+}
+
+.footer-des{
+  font-size: 32rpx;
+  color:#555;
+}
+.text-gray{
+  color:#aaa;
+}
