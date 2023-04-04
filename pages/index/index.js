@@ -5,10 +5,11 @@ import WxValidate from '../../utils/WxValidate';
 import CustomPage from '../../CustomPage';
 CustomPage({
   data: {
+    loginEnd: false,
     sexArr: ['请选择性别', '男', '女'],
     sex: 0,
     disabled: false,
-    userInfo:{type:0}
+    userInfo: { type: 0 }
   },
 
   onLoad() {
@@ -25,9 +26,12 @@ CustomPage({
         登录成功,并且授权成功 ,获取首页数据
       */
       if (value.login && value.auth) {
-        that.showTips('登录成功', 'success');
+        let loginEnd = that.data.loginEnd;
+        if (!loginEnd) that.showTips('登录成功', 'success');
+
         that.setData({
-          modalauth: false
+          modalauth: false,
+          loginEnd: true
         })
       }
       /**
@@ -145,7 +149,7 @@ CustomPage({
         let data = res.data;
         that.setData(data);
         wx.navigateTo({
-          url: '/pages/index/edit?id='+data.id          
+          url: '/pages/index/edit?id=' + data.id
         })
       } else {
         that.showTips(res.msg || "出错了");
@@ -207,9 +211,14 @@ CustomPage({
       scanType: ['qrCode'],
       success(res) {
         console.log(res);
-        wx.navigateTo({
-          url: res.result,
-        }) 
+        let result = res.result;
+        if (result.indexOf("/pages/index/detail?id=") > -1) {
+          wx.navigateTo({
+            url: res.result,
+          })
+        } else {
+          that.showTips("请扫描专用二维码~");
+        }
       }
     })
   }

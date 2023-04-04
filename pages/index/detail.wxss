@@ -16,7 +16,10 @@
   overflow: hidden;
   border-radius: 30rpx;
 }
-
+.cu-list.menu>.cu-item{
+  padding:0 50rpx;
+  min-height: 132rpx;
+}
 .safe-btns{
   padding-bottom:calc(200rpx + env(safe-area-inset-bottom) / 2);
 }

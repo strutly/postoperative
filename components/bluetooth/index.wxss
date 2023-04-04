@@ -1,0 +1,32 @@
+/* components/bluetooth/index.wxss */
+@import "/style/colorUI/main.wxss";
+@import "/style/colorUI/icon.wxss";
+
+
+
+.foot{
+  position: fixed;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.safe-bottom{
+  padding-bottom: calc(50rpx + constant(safe-area-inset-bottom) / 2);  
+  padding-bottom: calc(50rpx + env(safe-area-inset-bottom) / 2); 
+}
+
+.modal-box{
+  position: fixed;
+  bottom: 0;  
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: rgba(180,180,180,0.6);  
+}
+
+.modal-content{
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 5vw 5vw 0 0;
+}

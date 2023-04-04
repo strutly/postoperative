@@ -1,0 +1,101 @@
+<topTips errorShow="{{errorShow}}" errorMsg="{{errorMsg}}" errorType="{{errorType}}"></topTips>
+<view class="bg-white foot text-center padding safe-bottom">
+  <view class="bg-main round cu-btn padding-xl text-xl" style="width: 75%;" bindtap="checkPrintStatus">{{btnMsg}}</view>
+</view>
+
+<view class="modal-box  flex flex-direction" wx:if="{{modalBluetooth}}" catchtouchmove="true">
+  <view class="modal-bg flex-sub"></view>
+  <view class="modal-content padding-xl flex-direction">
+    <view class="flex solids-bottom padding-bottom align-center">
+      <view class="flex-sub">
+        <text class="padding-sm cuIcon-close text-main text-bold text-xxl" bindtap="{{clooseBtn}}" data-name="Bluetooth"></text>
+      </view>
+      <view class="cu-btn bg-main round" bindtap="startSearch">蓝牙搜索</view>
+    </view>
+    <scroll-view scroll-y="true" style="height:45vh;">
+      <view class="cu-list menu sm-border">
+        <view class="cu-item text-lg" wx:for="{{devices}}" wx:for-item="item" wx:key="{{item.deviceId}}">
+          <view class="content">
+            {{item.name}}
+          </view>
+          <view class="action">
+            <view class="cu-btn bg-{{bluetoothIndex==index?'grey':'main'}} sm radius" bindtap="{{bluetoothIndex==index?'closeBLEConnection':'connect'}}" data-index="{{index}}">{{bluetoothIndex==index?'断开连接':'连接'}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+
+<view class="modal-box  flex flex-direction" catchtouchmove="true" wx:if="{{modalPrint}}">
+  <view class="modal-bg flex-sub"></view>
+  <view class="modal-content padding-xl flex flex-direction ">
+    <view class="text-center text-xxl margin-bottom flex align-center">
+      <text class="cuIcon-close text-main text-bold " bindtap="{{clooseBtn}}" data-name="Print"></text>
+
+      <view class="flex-sub">
+        <text class="cuIcon-pick text-main"></text>{{connectFlag?'打印机已就绪':'请先连接蓝牙打印机'}}
+      </view>
+
+      <view class="cuIcon-order text-main" bindtap="changeBluetooth" wx:if="{{connectFlag}}"></view>
+    </view>
+
+    <view class="solids padding flex-sub">
+      <view class="flex">
+        <view class="flex-sub">
+          <view class="text-lg">
+            <text data-type="text" data-text="{{detail.args.info.name}}" class="text-xl print text-bold margin-right-sm">{{detail.args.info.name}}</text>
+            <text data-type="text" class="margin-right-sm print" data-text="男">{{detail.args.info.sex==1?'男':'女'}}</text>
+            <text class="print" data-type="text " data-text="65岁">{{detail.args.info.age}}岁</text>
+          </view>
+          <view class="margin-top print">2023-03-30</view>
+        </view>
+        <image mode="aspectFill" class="margin-bottom-sm print" style="width: 150rpx;height: 150rpx;" data-type="image" data-url="{{qCode}}" src="{{qCode}}"></image>
+      </view>
+      <view class="bg-black" style="height: 6rpx;"></view>
+      <view class="bg-grey margin-tb-sm" style="height: 3rpx;"></view>
+
+
+      <view class="flex print">
+        <view class="flex-treble print" data-type="text" data-text="总能量">总能量</view>
+        <view class="flex-sub text-center print" data-type="text" data-text="1562.5">{{detail.args.num1}}</view>
+        <view class="flex-sub text-right print" data-type="text" data-text="Kcal">Kcal</view>
+      </view>
+      <view class="flex margin-top-sm">
+        <view class="flex-treble print" data-type="text" data-text="总液体量">总液体量</view>
+        <view class="flex-sub text-center print" data-type="text" data-text="2041.3">{{detail.args.num23}}</view>
+        <view class="flex-sub text-right print" data-type="text" data-text="ml">ml</view>
+      </view>
+      <view class="flex margin-top-sm">
+        <view class="flex-treble print" data-type="text" data-text="热氮比">热氮比</view>
+        <view class="flex-sub text-center print" data-type="text" data-text="112.4">{{detail.args.scale}}</view>
+        <view class="flex-sub text-right print" data-type="text" data-text=""></view>
+      </view>
+      <view class="flex margin-top-sm">
+        <view class="flex-treble print" data-type="text" data-text="输液速度">输液速度</view>
+        <view class="flex-sub text-center print" data-type="text" data-text="---">{{detail.args.num24}}</view>
+        <view class="flex-sub text-right print" data-type="text" data-text=""></view>
+      </view>
+      <view class="flex margin-top-sm">
+        <view class="flex-treble print" data-type="text" data-text="总葡萄糖">总葡萄糖</view>
+        <view class="flex-sub text-center print" data-type="text">{{detail.args.sumSugar}}</view>
+        <view class="flex-sub text-right print" data-type="text" data-text=""></view>
+      </view>
+      <view class="flex margin-tb-sm">
+        <view class="flex-treble print" data-type="text" data-text="胰岛素用量">胰岛素用量</view>
+        <view class="flex-sub text-center print" data-type="text" data-text="51">{{detail.args.num25}}</view>
+        <view class="flex-sub text-right print" data-type="text" data-text="IU">IU</view>
+      </view>
+    </view>
+  </view>
+  <view class="bg-white padding text-center safe-bottom">
+    <view class="bg-main round cu-btn padding-xl text-xl" style="width: 75%;" bindtap="{{connectFlag?'print':'searchModal'}}">{{connectFlag?'打印':'搜索蓝牙'}}</view>
+  </view>
+
+
+
+
+
+
+</view>

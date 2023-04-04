@@ -176,17 +176,14 @@ var jpPrinter = {　　　　
     };
 
     jpPrinter.setBitmap = function(x, y, mode, res) {  //添加图片，res为画布参数
-      console.log(res)
       var width = parseInt((res.width + 7) / 8 * 8 / 8)
       var height = res.height;
       var time = 1;
       var temp = res.data.length - width * 32;
       var pointList = []
-      console.log(width + "--" + height)
       data = "BITMAP " + x + "," + y + "," + width + "," + height + "," + mode + ","
       jpPrinter.addCommand(data)
       for (var i = 0; i < height; ++i) {
-        console.log(temp)
         for (var j = 0; j < width; ++j) {
           for (var k = 0; k < 32; k += 4) {
             if (res.data[temp] == 0 && res.data[temp + 1] == 0 && res.data[temp + 2] == 0 && res.data[temp + 3] == 0) {
