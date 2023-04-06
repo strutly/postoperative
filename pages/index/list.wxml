@@ -1,19 +1,19 @@
 <wxs src="../../utils/tools.wxs" module="utils" />
 
-  <view class="cu-bar bg-white search">
-    <view class="search-form round">
-      <text class="cuIcon-search"></text>
-      <input bindconfirm="submit" type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
-    </view>
+<view class="cu-bar bg-white search">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input bindconfirm="submit" type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
   </view>
+</view>
 
 <view class="cu-list menu safe-bottom">
   <view bindtap="toUrl" data-url="/pages/index/detail?id={{item.id}}" class="cu-item" wx:for="{{list}}" wx:key="index">
-    <view class="content  padding-tb-xl">
-      <text class="margin-right">{{item.args.info.name}}</text>
-      <text class="text-bold {{item.args.info.sex==1?'cuIcon-male text-blue':'cuIcon-female text-red'}}"></text>
+    <view class="content padding-tb-xl">
+      <text class="margin-right text-lg">{{item.args.info.name}}</text>
+      <text class="text-bold text-lg {{item.args.info.sex==1?'cuIcon-male text-blue':'cuIcon-female text-red'}}"></text>
     </view>
-    <view class="action">
+    <view class="action text-lg">
       {{utils.timeago(item.createTime)}}
     </view>
   </view>

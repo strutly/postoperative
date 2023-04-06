@@ -1,13 +1,31 @@
 .tabbar{
-  height: calc(150rpx + env(safe-area-inset-bottom) / 2)!important;
-	padding-bottom: calc(env(safe-area-inset-bottom) / 2)!important;
-}
-.cuIcon-cu-image text{
-  font-size: 80rpx !important;
-  margin-bottom: 30rpx !important;
+  height: calc(175rpx + env(safe-area-inset-bottom) / 2)!important;
+	padding-bottom: calc(25rpx + env(safe-area-inset-bottom) / 2)!important;
 }
 
-.footer-des{
+.cu-form-group{
+  min-height: 150rpx;
+}
+
+.cuIcon-cu-image text{
+  font-size: 60rpx !important;
+  margin-bottom: 30rpx !important;
+}
+.cu-form-group input,
+.title,
+.picker{
   font-size: 32rpx;
+}
+.cu-form-group picker .picker{
+  font-size: 32rpx;
+}
+
+.text-lg-xl{
+  font-size: 60rpx !important;
+}
+
+
+.footer-des{
+  font-size: 28rpx;
   color:#555;
 }

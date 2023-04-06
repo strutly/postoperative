@@ -51,6 +51,7 @@ Component({
       console.log(newVal);
       if (newVal.id) {
         that.setData({
+          sumSugar:that.sum(newVal.args.num8,newVal.args.num11),
           qCode: drawQrcode.drawImg("/pages/index/detail?id=" + newVal.id, {
             typeNumber: 4,          // 密度
             errorCorrectLevel: 'L', // 纠错等级

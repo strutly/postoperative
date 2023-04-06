@@ -1,1 +1,4 @@
 /* pages/index/list.wxss */
+.cu-list.menu>.cu-item{
+  min-height: 150rpx;
+}

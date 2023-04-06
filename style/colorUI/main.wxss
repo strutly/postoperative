@@ -29,7 +29,7 @@ page {
 	--black: #333333;
 	--darkGray: #666666;
 	--gray: #aaaaaa;
-	--ghostWhite: #f1f1f1;
+	--ghostWhite: #f7f7f7;
 	--white: #ffffff;
 	/* 浅色 */
 	--redLight: #fadbd9;
@@ -100,6 +100,10 @@ image {
 
 .radius-xl {
 	border-radius: 16rpx;
+}
+
+.radius-sl {
+	border-radius: 20rpx;
 }
 
 /* ==================

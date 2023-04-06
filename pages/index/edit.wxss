@@ -1,18 +1,15 @@
-page{
-  background-color: #f7f7f7;
-}
-.cu-g{
-  position: relative;
-  font-size: 32rpx;
+.cu-list{
+  overflow: hidden;
+  border-radius: 30rpx;
 }
 .cu-list.menu>.cu-item{
   padding:0 50rpx;
   min-height: 132rpx;
+  font-size: 32rpx;
 }
 
-.cu-list{
-  overflow: hidden;
-  border-radius: 30rpx;
+.cu-list.menu>.cu-item .content{
+  font-size: 32rpx;
 }
 
 .safe-btns{
@@ -26,25 +23,11 @@ page{
   bottom:0;
   padding-bottom: calc(env(safe-area-inset-bottom) / 2);
 }
-.share__canvas{
-  box-sizing: border-box;
-  width: 100vw;
-  height:70vw;
-  border:1px solid red;
-}
-.share__canvas_img{
-  box-sizing: border-box;
-  width: 100vw;
-  height:70vw;
-}
-.line{
-  width: 100%;
-  height: 2rpx;
-  background-color: #f0f0f0;
+.foot-btn{
+  width: 66vw;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 36rpx;
 }
 
-.safe-bottom{
-  padding-bottom: calc(50rpx + constant(safe-area-inset-bottom) / 2);  
-  padding-bottom: calc(50rpx + env(safe-area-inset-bottom) / 2); 
-}
 

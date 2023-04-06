@@ -1,10 +1,10 @@
 <topTips errorShow="{{errorShow}}" errorMsg="{{errorMsg}}" errorType="{{errorType}}"></topTips>
 <form bindsubmit="submit" wx:if="{{userInfo.type==1}}">
   <input name="id" hidden value="{{id}}"></input>
-  <view class="cu-card margin bg-white radius-xl">
+  <view class="cu-card margin-sm bg-white radius-xl">
     <view class="cu-form-group padding-lg">
       <input placeholder="输入身份证" type="idcard" name="cardNo" value="{{cardNo}}" bindblur="cardNoChange"></input>
-      <ocr-navigator bind:onSuccess="cardSuccess" certificateType="idCard" opposite="{{false}}">
+      <ocr-navigator class="text-lg-xl" bind:onSuccess="cardSuccess" certificateType="idCard" opposite="{{false}}">
         <text class="cuIcon-scan text-main margin-right-sm"></text>
       </ocr-navigator>
     </view>
@@ -21,7 +21,7 @@
       </picker>
     </view>
     <view class="cu-form-group padding-lg">
-      <view class="title">年龄</view>
+      <view class="title text-lg">年龄</view>
       <input class="text-right" type="number" placeholder="年龄" name="age" value="{{age}}"></input>
     </view>
     <view class="cu-form-group padding-lg">
@@ -34,7 +34,7 @@
     </view>
   </view>
   <view class="text-center margin-top-xl">
-    <button style="width: 60%;" formType="submit" class="cu-btn round padding-tb-xl bg-main" disabled="{{disabled}}">开始配置</button>
+    <button style="width: 66%;height:100rpx;" formType="submit" class="cu-btn round text-xl padding-tb-xl bg-main" disabled="{{disabled}}">开始配置</button>
   </view>
 </form>
 
@@ -65,8 +65,8 @@
     <view class="footer-des">记录</view>
   </view>
   <view class="action margin-top" bindtap="scanCode">
-    <view class='cuIcon-cu-image margin-bottom'>
-      <text class="cuIcon-scan text-xxl text-main"></text>
+    <view class='cuIcon-cu-image margin-bottom text-lg-xl'>
+      <text class="cuIcon-scan text-main"></text>
     </view>
     <view class="footer-des">扫一扫</view>
   </view>

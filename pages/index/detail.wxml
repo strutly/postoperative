@@ -1,18 +1,15 @@
 <topTips errorShow="{{errorShow}}" errorMsg="{{errorMsg}}" errorType="{{errorType}}"></topTips>
 
 <scroll-view scroll-y="true">
-
-
-  <view class="bg-main flex align-center padding-lg margin text-center radius-xl text-lg">
-    <view class="">{{detail.args.info.name}}</view>
-    <text class="flex-sub cuIcon-{{detail.args.info.sex==1?'male':'female'}} cu-g text-{{detail.args.info.sex==1?'blue':'red'}}"></text>
-    <view class="flex-sub cu-g">{{detail.args.info.age}}岁</view>
-    <view class="flex-sub cu-g">{{detail.args.info.height}}cm</view>
-    <view class="flex-sub">{{detail.args.info.weight}}kg</view>
-    <view class="cuIcon-edit" bindtap="back"></view>
+  <view class="bg-main flex align-center padding-xl margin-sm text-center text-lg radius-xl">
+    <view class="margin-left-sm">{{detail.args.info.name}}</view>
+    <text class="margin-left cuIcon-{{detail.args.info.sex==1?'male':'female'}} text-{{detail.args.info.sex==1?'blue':'red'}}"></text>
+    <view class="flex-sub">{{detail.args.info.age}}岁</view>
+    <view class="flex-sub">{{detail.args.info.height}}cm</view>
+    <view class="margin-right-sm">{{detail.args.info.weight}}kg</view>
   </view>
 
-  <view class="cu-list menu sm-border solids card-menu shadow shadow-lg">
+  <view class="cu-list menu sm-border solids margin-sm shadow shadow-lg">
     <view class="cu-item">
       <view class="content">
         总能量需求(Kcal)

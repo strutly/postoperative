@@ -1,25 +1,29 @@
 <topTips errorShow="{{errorShow}}" errorMsg="{{errorMsg}}" errorType="{{errorType}}"></topTips>
 <scroll-view scroll-y="true">
-  <view class="bg-main flex align-center padding-lg margin text-center radius-xl text-lg">
-    <view class="">{{info.name}}</view>
-    <text class="cuIcon-{{info.sex==1?'male':'female'}} cu-g text-{{info.sex==1?'blue':'red'}} margin-left"></text>
+
+  <view class="bg-main flex align-center padding-xl margin-sm text-center text-lg radius-xl">
+    <view class="margin-left-sm">{{info.name}}</view>
+    <text class="margin-left cuIcon-{{info.sex==1?'male':'female'}} text-{{info.sex==1?'blue':'red'}}"></text>
     <view class="flex-sub">{{info.age}}岁</view>
-    <view class="flex-sub">{{info.height}}<text>cm</text></view>
-    <view class="flex-sub">{{info.weight}}<text>kg</text></view>
+    <view class="flex-sub">{{info.height}}cm</view>
+    <view class="margin-right-sm">{{info.weight}}kg</view>
     <view class="text-xxl">
       <text class="cuIcon-edit" bindtap="back"></text>
     </view>
   </view>
 
-  <view class="cu-list menu sm-border solids card-menu shadow shadow-lg">
+
+  
+
+  <view class="cu-list menu sm-border solids margin-sm shadow shadow-lg">
     <view class="cu-item">
       <view class="content">
         总能量需求(Kcal)
         <text class="text-orange">(*{{args[argIndex]}})</text>
       </view>
-      <view class="action text-xxl">
-        <picker bindchange="pickerChange text-xxl" range="{{args}}">
-          {{nums.num1}}<text class="margin-left cuIcon-edit text-main"></text>
+      <view class="action">
+        <picker bindchange="pickerChange" class="text-xxl" range="{{args}}">
+          <text class="text-gray">{{nums.num1}}</text><text class="margin-left cuIcon-edit text-main"></text>
         </picker>
       </view>
     </view>
@@ -272,8 +276,10 @@
 </scroll-view>
 
 
-<view class="bg-white padding foot text-center safe-bottom">
-  <view class="bg-main round cu-btn padding-xl text-xl" style="width: 75%;" bindtap="editEnd">配置完成</view>
+
+
+<view class="bg-white foot text-center safe-bottom">
+  <view class="bg-main round cu-btn foot-btn margin-tb" bindtap="editEnd">配置完成</view>
 </view>
 
 <print detail="{{detail}}" btnMsg="配置完成" wx:if="{{show}}" modalPrint="{{modalPrint}}" clooseBtn="home"></print>
