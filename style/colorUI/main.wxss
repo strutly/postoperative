@@ -18,7 +18,7 @@ page {
 	--orange: #f37b1d;
 	--yellow: #fbbd08;
 	--olive: #8dc63f;
-	--green: #39b54a;
+	--green: #00A6A6;
 	--cyan: #1cbbb4;
 	--blue: #3b9cfc;
 	--purple: #6739b6;
@@ -1380,7 +1380,7 @@ button.icon.lg {
 	box-sizing: border-box;
 	width: 200%;
 	height: 200%;
-	border-bottom: 1rpx solid #ddd;
+	border-bottom: 2rpx solid #ddd;
 	border-radius: inherit;
 	content: " ";
 	transform: scale(.5);

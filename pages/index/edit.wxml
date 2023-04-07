@@ -1,5 +1,5 @@
 <topTips errorShow="{{errorShow}}" errorMsg="{{errorMsg}}" errorType="{{errorType}}"></topTips>
-<scroll-view scroll-y="true">
+
 
   <view class="bg-main flex align-center padding-xl margin-sm text-center text-lg radius-xl">
     <view class="margin-left-sm">{{info.name}}</view>
@@ -273,7 +273,7 @@
 
   <view class="safe-btns"></view>
 
-</scroll-view>
+
 
 
 

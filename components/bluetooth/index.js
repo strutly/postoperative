@@ -423,7 +423,7 @@ Component({
       }
       wx.hideLoading();
     },
-    closeConnect() {
+    closeBLEConnection() {
       let that = this;
       console.log("断开链接")
       wx.closeBLEConnection({

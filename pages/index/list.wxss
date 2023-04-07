@@ -2,3 +2,8 @@
 .cu-list.menu>.cu-item{
   min-height: 150rpx;
 }
+.cu-bar .search-form{
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: var(--white);
+}
