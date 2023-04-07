@@ -23,3 +23,17 @@
   bottom:0;
   padding-bottom: calc(env(safe-area-inset-bottom) / 2);
 }
+.cu-list.menu>.cu-item:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+  box-sizing: border-box;
+  width: calc(100% - 60rpx) !important;
+	height:unset;
+	border-bottom: 1rpx solid #f2f2f2;
+	border-radius: inherit;
+	content: " ";
+	transform: unset;
+	transform-origin:unset;
+	pointer-events: none
+}
