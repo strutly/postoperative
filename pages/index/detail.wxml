@@ -5,11 +5,11 @@
     <view class="margin-left-sm">{{detail.args.info.name}}</view>
     <text class="margin-left cuIcon-{{detail.args.info.sex==1?'male':'female'}} text-{{detail.args.info.sex==1?'blue':'red'}}"></text>
     <view class="flex-sub">{{detail.args.info.age}}岁</view>
-    <view class="flex-sub">{{detail.args.info.height}}cm</view>
+    <view class="flex-sub">{{detail.args.info.height}}m</view>
     <view class="margin-right-sm">{{detail.args.info.weight}}kg</view>
   </view>
 
-  <view class="cu-list menu sm-border solids margin-sm shadow shadow-lg">
+  <view class="cu-list menu sm-border solids margin-sm shadow shadow-lg" style="font-size: 0;">
     <view class="cu-item">
       <view class="content">
         总能量需求(Kcal)

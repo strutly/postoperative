@@ -30,7 +30,7 @@
   box-sizing: border-box;
   width: calc(100% - 60rpx) !important;
 	height:unset;
-	border-bottom: 1rpx solid #f2f2f2;
+	border-bottom: 1px solid #eee;
 	border-radius: inherit;
 	content: " ";
 	transform: unset;

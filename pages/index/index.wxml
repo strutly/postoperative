@@ -26,11 +26,11 @@
     </view>
     <view class="cu-form-group padding-lg">
       <view class="title">身高</view>
-      <input class="text-right" placeholder="身高(CM)" name="height" type="digit" value="{{height}}"></input>
+      <input class="text-right" placeholder="身高(m)" name="height" type="digit" value="{{height}}"></input>
     </view>
     <view class="cu-form-group padding-lg">
       <view class="title">体重</view>
-      <input class="text-right" placeholder="体重(KG)" name="weight" type="digit" value="{{weight}}"></input>
+      <input class="text-right" placeholder="体重(kg)" name="weight" type="digit" value="{{weight}}"></input>
     </view>
   </view>
   <view class="text-center margin-top-xl">

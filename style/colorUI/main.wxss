@@ -1380,7 +1380,7 @@ button.icon.lg {
 	box-sizing: border-box;
 	width: 200%;
 	height: 200%;
-	border-bottom: 2rpx solid #ddd;
+	border-bottom: 2rpx solid #eee;
 	border-radius: inherit;
 	content: " ";
 	transform: scale(.5);
