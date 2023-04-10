@@ -323,7 +323,7 @@ Component({
       let detail = that.data.detail;
       console.log(detail);
       var command = tsc.jpPrinter.createNew();
-      command.setSize(78, 61.5);
+      command.setSize(78, 101.5);
       command.setGap(0);
       command.setCls();
 
