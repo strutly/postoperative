@@ -343,55 +343,55 @@ Component({
       //脂肪乳(20%)
       command.setText(x, j, "TSS24.BF2", 1, 1, "脂肪乳(20%)");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num3));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;//尤文脂肪乳
       command.setText(x, j, "TSS24.BF2", 1, 1, "尤文脂肪乳");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num5));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;//50%GS量
       command.setText(x, j, "TSS24.BF2", 1, 1, "50%GS量");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num8));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;//10%GS量
       command.setText(x, j, "TSS24.BF2", 1, 1, "10%GS量");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num11));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;//氨基酸(双肽)
       command.setText(x, j, "TSS24.BF2", 1, 1, "氨基酸(双肽)");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num13));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;//丙氨酰谷氨酰胺
       command.setText(x, j, "TSS24.BF2", 1, 1, "丙氨酰谷氨酰胺");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num15));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;//氯化钾(15%)
       command.setText(x, j, "TSS24.BF2", 1, 1, "氯化钾(15%)");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num16));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;//氯化纳(10%)
       command.setText(x, j, "TSS24.BF2", 1, 1, "氯化纳(10%)");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num17));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;//水乐维他
       command.setText(x, j, "TSS24.BF2", 1, 1, "水乐维他");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num18));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;//维他利匹特
       command.setText(x, j, "TSS24.BF2", 1, 1, "维他利匹特");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num19));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;//格利福斯
       command.setText(x, j, "TSS24.BF2", 1, 1, "格利福斯");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num20));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;//安达美
       command.setText(x, j, "TSS24.BF2", 1, 1, "安达美");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num21));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;//潘南金
       command.setText(x, j, "TSS24.BF2", 1, 1, "潘南金");
       command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num22));
-      command.setText(x + 420, j, "TSS24.BF2", 1, 1, "ml");
+      command.setText(x + 440, j, "TSS24.BF2", 1, 1, "ml");
       j+=lim;
 
       //总能量
