@@ -16,7 +16,7 @@
   font-size: 36rpx;
 }
 .safe-btns{
-  padding-bottom:calc(200rpx + env(safe-area-inset-bottom) / 2);
+  padding-bottom:calc(120rpx + env(safe-area-inset-bottom) / 2);
 }
 .safe-bottom{
   padding-bottom: calc(constant(safe-area-inset-bottom) / 2);  
