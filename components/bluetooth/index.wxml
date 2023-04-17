@@ -40,7 +40,7 @@
       <view class="cuIcon-order text-main" bindtap="changeBluetooth" wx:if="{{connectFlag}}"></view>
     </view>
 
-    <scroll-view scroll-y="true" style="height:45vh;" class="solids padding-lg flex-sub radius-sl">
+    <scroll-view scroll-y="true" style="height:45vh;" class="solids padding-lg flex-sub radius-sl safe-btns">
       <view class="flex">
         <view class="flex-sub">
           <view class="text-lg">
@@ -52,103 +52,103 @@
         </view>
         <image mode="aspectFill" class="margin-bottom-sm" style="width: 150rpx;height: 150rpx;" data-type="image" data-url="{{qCode}}" src="{{qCode}}"></image>
       </view>
-      
+
       <view class="bg-grey" style="height: 1rpx;"></view>
       <view class="bg-black margin-top-xs margin-bottom" style="height: 4rpx;"></view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">脂肪乳(20%)</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num3)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num3)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">尤文脂肪乳</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num5)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num5)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">50%GS量</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num8)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num8)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">10%GS量</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num11)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num11)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">氨基酸(双肽)</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num13)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num13)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">丙氨酰谷氨酰胺</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num15)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num15)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">氯化钾(15%)</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num16)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num16)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">氯化纳(10%)</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num17)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num17)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">水乐维他</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num18)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num18)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">维他利匹特</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num19)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num19)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">格利福斯</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num20)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num20)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">安达美</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num21)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num21)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">潘南金</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num22)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num22)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="bg-grey margin-top-sm" style="height: 1rpx;"></view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">总能量</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num1)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num1)}}</view>
         <view class="flex-sub text-right">Kcal</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">总液体量</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num23)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num23)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">热氮比</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.scale)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.scale)}}</view>
         <view class="flex-sub text-right"></view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">输液速度</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num24)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num24)}}</view>
         <view class="flex-sub text-right">ml/h</view>
       </view>
       <view class="flex margin-top-sm">
         <view class="flex-treble">总葡萄糖</view>
-        <view class="flex-sub text-center">{{parse.int(sumSugar)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(sumSugar)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-tb-sm">
         <view class="flex-treble">胰岛素用量</view>
-        <view class="flex-sub text-center">{{parse.int(detail.args.num25)}}</view>
+        <view class="flex-sub text-center">{{parse.parse(detail.args.num25)}}</view>
         <view class="flex-sub text-right">IU</view>
       </view>
     </scroll-view>

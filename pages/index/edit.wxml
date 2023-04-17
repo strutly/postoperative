@@ -1,277 +1,277 @@
 <topTips errorShow="{{errorShow}}" errorMsg="{{errorMsg}}" errorType="{{errorType}}"></topTips>
 
 
-  <view class="bg-main flex align-center padding-xl margin-sm text-center text-lg radius-xl">
-    <view class="margin-left-sm">{{info.name}}</view>
-    <text class="margin-left cuIcon-{{info.sex==1?'male':'female'}} text-{{info.sex==1?'blue':'red'}}"></text>
-    <view class="flex-sub">{{info.age}}岁</view>
-    <view class="flex-sub">{{info.height}}cm</view>
-    <view class="margin-right-sm">{{info.weight}}kg</view>
-    <view class="text-xxl">
-      <text class="cuIcon-edit" bindtap="back"></text>
+<view class="bg-main flex align-center padding-xl margin-sm text-center text-lg radius-xl">
+  <view class="margin-left-sm">{{info.name}}</view>
+  <text class="margin-left cuIcon-{{info.sex==1?'male':'female'}} text-{{info.sex==1?'blue':'red'}}"></text>
+  <view class="flex-sub">{{info.age}}岁</view>
+  <view class="flex-sub">{{info.height}}cm</view>
+  <view class="margin-right-sm">{{info.weight}}kg</view>
+  <view class="text-xxl">
+    <text class="cuIcon-edit" bindtap="back"></text>
+  </view>
+</view>
+
+
+
+
+<view class="cu-list menu sm-border solids margin-sm shadow shadow-lg">
+  <view class="cu-item">
+    <view class="content">
+      总能量需求(Kcal)
+      <text class="text-orange">(*{{args[argIndex]}})</text>
+    </view>
+    <view class="action">
+      <picker bindchange="pickerChange" class="text-xxl" range="{{args}}">
+        <text class="text-gray">{{nums.num1}}</text><text class="margin-left cuIcon-edit text-main"></text>
+      </picker>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-usefullfill margin-right-sm text-main"></text>脂肪乳(20%)
     </view>
   </view>
 
-
-  
-
-  <view class="cu-list menu sm-border solids margin-sm shadow shadow-lg">
-    <view class="cu-item">
-      <view class="content">
-        总能量需求(Kcal)
-        <text class="text-orange">(*{{args[argIndex]}})</text>
-      </view>
-      <view class="action">
-        <picker bindchange="pickerChange" class="text-xxl" range="{{args}}">
-          <text class="text-gray">{{nums.num1}}</text><text class="margin-left cuIcon-edit text-main"></text>
-        </picker>
-      </view>
+  <view class="cu-item">
+    <view class="content">
+      能量<text class="text-gray">(Kcal)</text>
     </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>脂肪乳(20%)
-      </view>
+    <view class="action">
+      <text class="text-gray">{{nums.num2}}</text>
     </view>
-
-    <view class="cu-item">
-      <view class="content">
-        能量<text class="text-gray">(Kcal)</text>
-      </view>
-      <view class="action">
-        <text class="text-gray">{{nums.num2}}</text>
-      </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      液体量<text class="text-gray">(ml)</text>
     </view>
-    <view class="cu-item">
-      <view class="content">
-        液体量<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num3}}</text>
-      </view>
+    <view class="action">
+      <text class="text-main">{{nums.num3}}</text>
     </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>尤文脂肪乳
-      </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-usefullfill margin-right-sm text-main"></text>尤文脂肪乳
     </view>
-    <view class="cu-item">
-      <view class="content">
-        能量<text class="text-gray">(Kcal)</text>
-      </view>
-      <view class="action">
-        <text class="text-gray">{{nums.num4}}</text>
-      </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      能量<text class="text-gray">(Kcal)</text>
     </view>
-    <view class="cu-item">
-      <view class="content">
-        液体量<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num5}}</text>
-      </view>
+    <view class="action">
+      <text class="text-gray">{{nums.num4}}</text>
     </view>
-
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>葡萄糖注射液
-      </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      液体量<text class="text-gray">(ml)</text>
     </view>
-    <view class="cu-item">
-      <view class="content">
-        50%GS供能<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-gray">{{nums.num6}}</text>
-      </view>
+    <view class="action">
+      <text class="text-main">{{nums.num5}}</text>
     </view>
-    <view class="cu-item">
-      <view class="content">
-        GS克数<text class="text-gray">(g)</text>
-      </view>
-      <view class="action">
-        <text class="text-gray">{{nums.num7}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        50%GS量<text class="text-gray">(Kcal)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num8}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        10%GS供能<text class="text-gray">(Kcal)</text>
-      </view>
-      <view class="action">
-        <text class="text-gray">{{nums.num9}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        GS克数<text class="text-gray">(g)</text>
-      </view>
-      <view class="action">
-        <text class="text-gray">{{nums.num10}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        10%GS量<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num11}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>氨基酸(双肽)
-      </view>
-    </view>
-
-    <view class="cu-item">
-      <view class="content">
-        氨基酸<text class="text-gray">(g)</text>
-      </view>
-      <view class="action">
-        <text class="text-gray">{{nums.num12}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        液体量<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num13}}</text>
-      </view>
-    </view>
-
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>丙氨酰谷氨酰胺
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        氨基酸<text class="text-gray">(g)</text>
-      </view>
-      <view class="action">
-        <text class="text-gray">{{nums.num14}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        液体量<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num15}}</text>
-      </view>
-    </view>
-
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>电解质及微量元素
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        氯化钾(15%)<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num16}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        氯化纳(10%)<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num17}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        水乐维他<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num18}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        维他利匹特<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num19}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        格利福斯<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num20}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        安达美<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num21}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        潘南金<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num22}}</text>
-      </view>
-    </view>
-
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-usefullfill margin-right-sm text-main"></text>其他
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        液体总量<text class="text-gray">(ml)</text>
-      </view>
-      <view class="action">
-        <text class="text-main">{{nums.num23}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        营养液泵入速度<text class="text-gray">(ml/h)</text>
-      </view>
-      <view class="action">
-        <text class="text-green">{{nums.num24}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        胰岛素用量<text class="text-gray">(IU)</text>
-      </view>
-      <view class="action">
-        <text class="text-green">{{nums.num25}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        胰岛素泵入速度<text class="text-gray">(ml/h)</text>
-      </view>
-      <view class="action">
-        <text class="text-green">{{nums.num26}}</text>
-      </view>
-    </view>
-
   </view>
 
-  <view class="safe-btns"></view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-usefullfill margin-right-sm text-main"></text>葡萄糖注射液
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      50%GS供能<text class="text-gray">(ml)</text>
+    </view>
+    <view class="action">
+      <text class="text-gray">{{nums.num6}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      GS克数<text class="text-gray">(g)</text>
+    </view>
+    <view class="action">
+      <text class="text-gray">{{nums.num7}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      50%GS量<text class="text-gray">(Kcal)</text>
+    </view>
+    <view class="action">
+      <text class="text-main">{{nums.num8}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      10%GS供能<text class="text-gray">(Kcal)</text>
+    </view>
+    <view class="action">
+      <text class="text-gray">{{nums.num9}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      GS克数<text class="text-gray">(g)</text>
+    </view>
+    <view class="action">
+      <text class="text-gray">{{nums.num10}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      10%GS量<text class="text-gray">(ml)</text>
+    </view>
+    <view class="action">
+      <text class="text-main">{{nums.num11}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-usefullfill margin-right-sm text-main"></text>氨基酸(双肽)
+    </view>
+  </view>
+
+  <view class="cu-item">
+    <view class="content">
+      氨基酸<text class="text-gray">(g)</text>
+    </view>
+    <view class="action">
+      <text class="text-gray">{{nums.num12}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      液体量<text class="text-gray">(ml)</text>
+    </view>
+    <view class="action">
+      <text class="text-main">{{nums.num13}}</text>
+    </view>
+  </view>
+
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-usefullfill margin-right-sm text-main"></text>丙氨酰谷氨酰胺
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      氨基酸<text class="text-gray">(g)</text>
+    </view>
+    <view class="action">
+      <text class="text-gray">{{nums.num14}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      液体量<text class="text-gray">(ml)</text>
+    </view>
+    <view class="action">
+      <text class="text-main">{{nums.num15}}</text>
+    </view>
+  </view>
+
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-usefullfill margin-right-sm text-main"></text>电解质及微量元素
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      氯化钾(15%)<text class="text-gray">(ml)</text>
+    </view>
+    <view class="action">
+      <text class="text-main">{{nums.num16}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      氯化纳(10%)<text class="text-gray">(ml)</text>
+    </view>
+    <view class="action">
+      <text class="text-main">{{nums.num17}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      水乐维他<text class="text-gray">(ml)</text>
+    </view>
+    <view class="action">
+      <text class="text-main">{{nums.num18}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      维他利匹特<text class="text-gray">(ml)</text>
+    </view>
+    <view class="action">
+      <text class="text-main">{{nums.num19}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      格利福斯<text class="text-gray">(ml)</text>
+    </view>
+    <view class="action">
+      <text class="text-main">{{nums.num20}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      安达美<text class="text-gray">(ml)</text>
+    </view>
+    <view class="action">
+      <text class="text-main">{{nums.num21}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      潘南金<text class="text-gray">(ml)</text>
+    </view>
+    <view class="action">
+      <text class="text-main">{{nums.num22}}</text>
+    </view>
+  </view>
+
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-usefullfill margin-right-sm text-main"></text>其他
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      液体总量<text class="text-gray">(ml)</text>
+    </view>
+    <view class="action">
+      <text class="text-main">{{nums.num23}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      营养液泵入速度<text class="text-gray">(ml/h)</text>
+    </view>
+    <view class="action">
+      <text class="text-green">{{nums.num24}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      胰岛素用量<text class="text-gray">(IU)</text>
+    </view>
+    <view class="action">
+      <text class="text-green">{{nums.num25}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      胰岛素泵入速度<text class="text-gray">(ml/h)</text>
+    </view>
+    <view class="action">
+      <text class="text-green">{{nums.num26}}</text>
+    </view>
+  </view>
+
+</view>
+
+<view class="safe-btns"></view>
 
 
 

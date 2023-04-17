@@ -70,7 +70,7 @@
     </view>
     <view class="cu-item">
       <view class="content">
-        50%GS供能<text class="text-gray">(ml)</text>
+        50%GS供能<text class="text-gray">(Kcal)</text>
       </view>
       <view class="action">
         <text class="text-gray">{{detail.args.num6}}</text>

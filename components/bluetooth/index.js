@@ -425,7 +425,7 @@ Component({
       j+=lim;
       //胰岛素用量
       command.setText(x, j, "TSS24.BF2", 1, 1, "胰岛素用量");
-      command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.gsNum));
+      command.setText(x + 280, j, "TSS24.BF2", 1, 1, parseInt(detail.args.num25));
       command.setText(x + 440, j, "TSS24.BF2", 1, 1, "IU");
 
       command.setPagePrint();
