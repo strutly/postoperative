@@ -10,8 +10,22 @@
     </view>
     <view class="cu-form-group padding-lg">
       <view class="title">姓名</view>
-      <input class="text-right" placeholder="姓名" name="name" value="{{name}}"></input>
+      <input class="text-right" placeholder="姓名" name="name" bindinput="nameChange" bindblur="nameblur" value="{{name}}"></input>
+      
+      <view class="mask bg-white solids-bottom solids-top" wx:if="{{mask}}">
+        <view class="cu-list menu sm-border  margin-sm  shadow-lg">
+          <view class="cu-item" wx:for="{{patients}}" wx:key="index" bindtap="choose" data-index="{{index}}">
+            <view class="content">
+              {{item.name}}
+            </view>
+            <view class="action">
+              {{item.cardNo}}
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
+
     <view class="cu-form-group padding-lr-lg padding-tb-sm">
       <view class="title">性别</view>
       <picker bindchange="sexChange" name="sex" value="{{sex}}" range="{{sexArr}}">

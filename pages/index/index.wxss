@@ -5,6 +5,14 @@
 
 .cu-form-group{
   min-height: 150rpx;
+  position: relative;
+}
+.mask{
+  position: absolute;
+  top: 100%;
+  left:0;
+  width: 100%;
+  z-index:10;
 }
 
 .cuIcon-cu-image text{

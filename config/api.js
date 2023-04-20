@@ -232,6 +232,7 @@ let Api = {
   uploadFile: (data) => uploadFile(data),
   patientAdd: (data) => sendAjax(urls.patientUrl, data, 'post'),
   patientByCardNum: (data) => sendAjax(pathParams(urls.patientByCardNumUrl, data), { 1: 1 }, 'post'),
+  patientByName: (data) => sendAjax(urls.patientByNameUrl, data, 'post'),
   patientDetail: (data) => sendAjax(pathParams(urls.patientDetailUrl, data), { 1: 1 }, 'get'),
   patientUpdate: (data) => sendAjax(urls.patientUrl, data, 'put'),
 

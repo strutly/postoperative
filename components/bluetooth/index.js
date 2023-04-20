@@ -241,6 +241,7 @@ Component({
       } catch (error) {
         console.log("err")
         console.log(error);
+        wx.removeStorageSync('bluetooth');
         that.showTips('连接失败');
       }
     },

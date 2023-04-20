@@ -1,4 +1,4 @@
-var that;
+var that, timerId;
 const app = getApp()
 import Api from '../../config/api';
 import WxValidate from '../../utils/WxValidate';
@@ -123,7 +123,47 @@ CustomPage({
     let res = await Api.patientByCardNum({ cardNo: e.detail.value });
     if (res.code == 0 && res.data) {
       that.setData(res.data)
+    } else if (!res.data) {
+      that.setData({
+        id: ""
+      })
     }
+  },
+  nameChange(e) {
+    console.log(e);
+    let name = e.detail.value;
+    if (timerId) clearTimeout(timerId);
+    //实现防抖  
+    if (name) {
+      timerId = setTimeout(async () => {
+        let res = await Api.patientByName(name);
+        if (res.code == 0) {
+          that.setData({
+            mask: res.data.length > 0,
+            patients: res.data
+          })
+        }
+      }, 300);
+    }else{
+      that.setData({
+        mask: false,
+        patients: []
+      })
+    }
+  },
+  choose(e) {
+    console.log(e);
+    let index = e.currentTarget.dataset.index;
+    let patients = that.data.patients;
+    that.setData({
+      ...patients[index],
+      mask: false
+    })
+  },
+  nameblur() {
+    that.setData({
+      mask: false
+    })
   },
   async submit(e) {
     console.log(e);
