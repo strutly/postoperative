@@ -31,7 +31,9 @@
   right: 0;
   background-color: rgba(180,180,180,0.6);  
 }
-
+.modal-bg{
+  min-height: 10vh;
+}
 .modal-content{
   background-color: #fff;
   overflow: hidden;

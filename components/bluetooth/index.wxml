@@ -1,7 +1,7 @@
 <topTips errorShow="{{errorShow}}" errorMsg="{{errorMsg}}" errorType="{{errorType}}"></topTips>
 <wxs module="parse" src="../../utils/parse.wxs"></wxs>
 <view class="bg-white foot text-center safe-bottom">
-  <view class="bg-main round cu-btn foot-btn margin-tb" bindtap="checkPrintStatus">{{btnMsg}}</view>
+  <view class="bg-main round cu-btn foot-btn margin-tb" bindtap="{{clooseBtn}}" data-name="Print">{{btnMsg}}</view>
 </view>
 
 <view class="modal-box  flex flex-direction" wx:if="{{modalBluetooth}}" catchtouchmove="true">
@@ -9,7 +9,7 @@
   <view class="modal-content padding-xl flex-direction">
     <view class="flex solids-bottom padding-bottom align-center">
       <view class="flex-sub text-xxl">
-        <text class="padding-sm cuIcon-close text-main text-bold" bindtap="{{clooseBtn}}" data-name="Bluetooth"></text>
+        <text class="padding-sm cuIcon-close text-main text-bold" bindtap="modalStatus" data-name="Bluetooth"></text>
       </view>
       <view class="cu-btn bg-main round" bindtap="startSearch">蓝牙搜索</view>
     </view>
@@ -32,15 +32,16 @@
 <view class="modal-box  flex flex-direction" catchtouchmove="true" wx:if="{{modalPrint}}">
   <view class="modal-bg flex-sub"></view>
   <view class="modal-content padding-xl flex flex-direction ">
-    <view class="text-center text-xxl margin-bottom flex align-center">
+  
+    <!-- <view class="text-center text-xxl margin-bottom flex align-center">
       <text class="cuIcon-close text-main text-bold " bindtap="{{clooseBtn}}" data-name="Print"></text>
       <view class="flex-sub text-xl">
         <text class="cuIcon-pick text-main"></text>{{connectFlag?'打印机已就绪':'请先连接蓝牙打印机'}}
       </view>
       <view class="cuIcon-order text-main" bindtap="changeBluetooth" wx:if="{{connectFlag}}"></view>
-    </view>
+    </view> -->
 
-    <scroll-view scroll-y="true" style="height:45vh;" class="solids padding-lg flex-sub radius-sl">
+    <scroll-view scroll-y="true" style="min-height:45vh;" class="solids padding-lg flex-sub radius-sl">
       <view class="flex">
         <view class="flex-sub">
           <view class="text-lg">
@@ -155,6 +156,6 @@
   </view>
   <view class=" safe-btns bg-white"></view>
   <view class="bg-white foot text-center safe-bottom">
-    <view class="bg-main round cu-btn foot-btn margin-tb" bindtap="{{connectFlag?'print':'searchModal'}}">{{connectFlag?'打印':'搜索蓝牙'}}</view>
+    <view class="bg-main round cu-btn foot-btn margin-tb"  bindtap="modalStatus" data-name="Print">关闭</view>
   </view>
 </view>

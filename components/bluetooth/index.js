@@ -12,7 +12,7 @@ Component({
     },
     btnMsg: {
       type: String,
-      value: "准备打印"
+      value: "查看配置"
     },
     modalPrint: {
       type: Boolean,
