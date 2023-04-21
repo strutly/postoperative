@@ -119,8 +119,7 @@ CustomPage({
   },
   async cardNoChange(e) {
     let cardNo = e.detail.value;
-    if (cardNo.length < 11) return;
-    let res = await Api.patientByCardNum({ cardNo: e.detail.value });
+    let res = await Api.patientByCardNum({ cardNo: cardNo });
     if (res.code == 0 && res.data) {
       that.setData(res.data)
     } else if (!res.data) {
@@ -136,7 +135,7 @@ CustomPage({
     //实现防抖  
     if (name) {
       timerId = setTimeout(async () => {
-        let res = await Api.patientByName(name);
+        let res = await Api.patientByName({name:name});
         if (res.code == 0) {
           that.setData({
             mask: res.data.length > 0,
