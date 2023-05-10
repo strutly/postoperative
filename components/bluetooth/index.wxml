@@ -97,27 +97,27 @@
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
-        <view class="flex-treble">水乐维他</view>
+        <view class="flex-treble">水溶性维生素</view>
         <view class="flex-sub text-center">{{parse.parse(detail.args.num18)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
-        <view class="flex-treble">维他利匹特</view>
+        <view class="flex-treble">脂溶性维生素</view>
         <view class="flex-sub text-center">{{parse.parse(detail.args.num19)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
-        <view class="flex-treble">格利福斯</view>
+        <view class="flex-treble">甘油磷酸钠</view>
         <view class="flex-sub text-center">{{parse.parse(detail.args.num20)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
-        <view class="flex-treble">安达美</view>
+        <view class="flex-treble">多种微量元素</view>
         <view class="flex-sub text-center">{{parse.parse(detail.args.num21)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>
       <view class="flex margin-top-sm">
-        <view class="flex-treble">潘南金</view>
+        <view class="flex-treble">硫酸镁</view>
         <view class="flex-sub text-center">{{parse.parse(detail.args.num22)}}</view>
         <view class="flex-sub text-right">ml</view>
       </view>

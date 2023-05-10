@@ -2,10 +2,9 @@ var that;
 const app = getApp();
 import Api from '../../config/api';
 import CustomPage from '../../CustomPage';
-import tsc from "../../utils/print/tsc.js";
 CustomPage({
   data: {
-    detail:{
+    detail: {
 
     },
     info: {
@@ -15,6 +14,8 @@ CustomPage({
       height: 168,
       weight: 62.5
     },
+    proportion: 59,
+    percent: Array.from(Array(100).keys(), n => n + 1),
     connectFlag: false,
     bluetoothIndex: -1,
     sendContent: "",
@@ -36,7 +37,8 @@ CustomPage({
     nums: { "num1": 0, "num2": 0, "num3": 0, "num4": 0, "num5": 0, "num6": 0, "num7": 0, "num8": 0, "num9": 0, "num10": 0, "num11": 0, "num12": 0, "num13": 0, "num14": 0, "num15": 0, "num16": 0, "num17": 0, "num18": 0, "num19": 0, "num20": 0, "num21": 0, "num22": 0, "num23": 0, "num24": 0, "num25": 0, "num26": 0 },
     args: [25, 28, 32],
     argIndex: 0,
-    show:false
+    show: false,
+
   },
   onLoad(options) {
     that = this;
@@ -82,7 +84,7 @@ CustomPage({
     */
     let num2 = (num1 * 0.4 - 112).toFixed(2);
     //脂肪乳(20%)能量/1.8
-    let num3 = (num2 / 1.8).toFixed(2);
+    let num3 = Math.ceil(((num2 / 1.8) / 10)) * 10;
     //尤文脂肪乳能量=112
     let num4 = 112;
     //液体量=100，固定值
@@ -90,7 +92,10 @@ CustomPage({
     //葡萄糖总能量需求=总能量需求-脂肪乳总能量
     let sumSugar = (num1 * 0.6).toFixed(2);
     //50%GS供能=葡萄糖总能量需求×38%，单位Kcal
-    let num6 = (sumSugar * 0.38).toFixed(2);
+    //百分比
+    let proportion = that.data.proportion + 1;
+    //50%GS功能
+    let num6 = Math.ceil(((sumSugar * proportion) / 100) / 10) * 10;
     //50%GS克数=50%GS供能/4
     let num7 = (num6 / 4).toFixed(2);
     //50%GS量=50%GS克数×2
@@ -100,7 +105,7 @@ CustomPage({
     //10%GS克数=10%GS供能/4
     let num10 = (num9 / 4).toFixed(2);
     //10%GS量=10%GS克数×10
-    let num11 = (num10 * 10).toFixed(2);
+    let num11 = Math.ceil((num10 * 10) / 10) * 10;
 
     //氨基酸计算部分
 
@@ -109,8 +114,8 @@ CustomPage({
 
     //10%GS克数=10%GS供能/4
     let num12 = (scale - 3.2).toFixed(2);
-    //10%GS量=10%GS克数×10
-    let num13 = (num12 / 0.02278).toFixed(2);
+    //液体量=氨基酸(双肽)/ 0.02278
+    let num13 = Math.ceil((num12 / 0.02278) / 10) * 10;
 
     //丙氨酰谷氨酰胺=3.2，固定值
     let num14 = 3.2;
@@ -135,7 +140,7 @@ CustomPage({
     //安达美液体量=10，固定值，单位ml
     let num21 = 10;
     //潘南金液体量=10，固定值，单位ml
-    let num22 = 10;
+    let num22 = 5;
     //液体总量
     let num23 = parseInt(that.sum(num3, num5, num8, num11, num13, num15, num16, num17, num18, num19, num20, num21, num22));
     //营养液泵入速度=液体总量/24，单位ml/h
@@ -151,10 +156,17 @@ CustomPage({
     //胰岛素用量= GS量/4，单位IU
     let gsNum = (sumGs / 4).toFixed(2);
 
-    let nums = { sumSugar, num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13, num14, num15, num16, num17, num18, num19, num20, num21, num22, num23, num24, num25, num26, scale, gsNum };
+    let nums = { proportion, sumSugar, num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13, num14, num15, num16, num17, num18, num19, num20, num21, num22, num23, num24, num25, num26, scale, gsNum };
     that.setData({
       nums: nums
     })
+  },
+  proportionChange(e) {
+    that.setData({
+      proportion: parseInt(e.detail.value)
+    })
+    let argIndex = that.data.argIndex;
+    that.setNums(argIndex);
   },
   //计算总和
   sum(...args) {
@@ -176,14 +188,14 @@ CustomPage({
     if (res.code == 0) {
       that.setData({
         detail: res.data,
-        show:true,
-        modalPrint:true
+        show: true,
+        modalPrint: true
       })
     } else {
       that.showTips(res.msg);
     }
   },
-  
+
   onUnload() {
     wx.closeBLEConnection({ deviceId: app.BLEInformation.deviceId })
   },

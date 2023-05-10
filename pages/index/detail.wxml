@@ -67,6 +67,9 @@
       <view class="content">
         <text class="cuIcon-usefullfill margin-right-sm text-main"></text>葡萄糖注射液
       </view>
+      <view class="action">
+        {{(detail.args.proportion+1)||38}}%
+      </view>
     </view>
     <view class="cu-item">
       <view class="content">
@@ -184,7 +187,7 @@
     </view>
     <view class="cu-item">
       <view class="content">
-        水乐维他<text class="text-gray">(ml)</text>
+        水溶性维生素<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
         <text class="text-main">{{detail.args.num18}}</text>
@@ -192,7 +195,7 @@
     </view>
     <view class="cu-item">
       <view class="content">
-        维他利匹特<text class="text-gray">(ml)</text>
+        脂溶性维生素<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
         <text class="text-main">{{detail.args.num19}}</text>
@@ -200,7 +203,7 @@
     </view>
     <view class="cu-item">
       <view class="content">
-        格利福斯<text class="text-gray">(ml)</text>
+        甘油磷酸钠<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
         <text class="text-main">{{detail.args.num20}}</text>
@@ -208,7 +211,7 @@
     </view>
     <view class="cu-item">
       <view class="content">
-        安达美<text class="text-gray">(ml)</text>
+        多种微量元素<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
         <text class="text-main">{{detail.args.num21}}</text>
@@ -216,7 +219,7 @@
     </view>
     <view class="cu-item">
       <view class="content">
-        潘南金<text class="text-gray">(ml)</text>
+        硫酸镁<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
         <text class="text-main">{{detail.args.num22}}</text>

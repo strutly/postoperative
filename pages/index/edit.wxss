@@ -29,5 +29,8 @@
   line-height: 100rpx;
   font-size: 36rpx;
 }
+.solids-main{
+  border:solid 2rpx var(--main);
+}
 
 
