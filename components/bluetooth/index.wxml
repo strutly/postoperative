@@ -49,7 +49,7 @@
             <text class="margin-right-sm">{{detail.args.info.sex==1?'男':'女'}}</text>
             <text class="print">{{detail.args.info.age}}岁</text>
           </view>
-          <view class="margin-top">2023-03-30</view>
+          <view class="margin-top">{{parse.dateFormat(detail.createTime,'yyyy-MM-dd')}}</view>
         </view>
         <image mode="aspectFill" class="margin-bottom-sm" style="width: 150rpx;height: 150rpx;" data-type="image" data-url="{{qCode}}" src="{{qCode}}"></image>
       </view>

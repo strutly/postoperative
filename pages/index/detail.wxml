@@ -1,5 +1,5 @@
 <topTips errorShow="{{errorShow}}" errorMsg="{{errorMsg}}" errorType="{{errorType}}"></topTips>
-
+<wxs module="parse" src="../../utils/parse.wxs"></wxs>
 <scroll-view scroll-y="true">
   <view class="bg-main flex align-center padding-xl margin-sm text-center text-lg radius-xl">
     <view class="margin-left-sm">{{detail.args.info.name}}</view>
@@ -38,7 +38,7 @@
         液体量<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num3}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num3)}}</text>
       </view>
     </view>
     <view class="cu-item">
@@ -59,7 +59,7 @@
         液体量<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num5}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num5)}}</text>
       </view>
     </view>
 
@@ -92,7 +92,7 @@
         50%GS量<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num8}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num8)}}</text>
       </view>
     </view>
     <view class="cu-item">
@@ -116,7 +116,7 @@
         10%GS量<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num11}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num11)}}</text>
       </view>
     </view>
     <view class="cu-item">
@@ -138,7 +138,7 @@
         液体量<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num13}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num13)}}</text>
       </view>
     </view>
 
@@ -160,7 +160,7 @@
         液体量<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num15}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num15)}}</text>
       </view>
     </view>
 
@@ -174,7 +174,7 @@
         氯化钾(15%)<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num16}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num16)}}</text>
       </view>
     </view>
     <view class="cu-item">
@@ -182,7 +182,7 @@
         氯化纳(10%)<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num17}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num17)}}</text>
       </view>
     </view>
     <view class="cu-item">
@@ -190,7 +190,7 @@
         水溶性维生素<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num18}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num18)}}</text>
       </view>
     </view>
     <view class="cu-item">
@@ -198,7 +198,7 @@
         脂溶性维生素<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num19}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num19)}}</text>
       </view>
     </view>
     <view class="cu-item">
@@ -206,7 +206,7 @@
         甘油磷酸钠<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num20}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num20)}}</text>
       </view>
     </view>
     <view class="cu-item">
@@ -214,7 +214,7 @@
         多种微量元素<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num21}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num21)}}</text>
       </view>
     </view>
     <view class="cu-item">
@@ -222,7 +222,7 @@
         硫酸镁<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num22}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num22)}}</text>
       </view>
     </view>
 
@@ -236,7 +236,7 @@
         液体总量<text class="text-gray">(ml)</text>
       </view>
       <view class="action">
-        <text class="text-main">{{detail.args.num23}}</text>
+        <text class="text-main">{{parse.parse(detail.args.num23)}}</text>
       </view>
     </view>
     <view class="cu-item">
